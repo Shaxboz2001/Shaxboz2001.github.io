@@ -1,0 +1,220 @@
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar starts */
+nav {
+  width: 100vw;
+  display: flex;
+  background-color: #1a1a1a;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  width: 70%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+nav ul li > * {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+nav ul li > *:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Navbar ends */
+
+/* home-section starts */
+.home-section {
+  width: 100vw;
+  position: relative;
+}
+.home-section .top {
+  width: 100vw;
+  height: 70vh;
+  background-image: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.3);
+}
+.home-section > h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.home-section > .bottom > p {
+  width: 60%;
+  font-size: 1.2rem;
+}
+.home-section > .bottom {
+  height: calc(100vh- 582px);
+  color: #fff;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* home-section ends */
+/* About section starts */
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ef4d4d;
+  color: #fff;
+  padding: 3rem;
+  min-height: calc(100vh - 82px);
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.card > img {
+  width: 60%;
+}
+/* About section ends */
+
+/* Contact section starts */
+.top-contact {
+  background: linear-gradient(rgba(12, 12, 34, 0.8), rgba(43, 43, 12, 0.4)),
+    url("https://media.istockphoto.com/photos/contact-us-concept-icon-telephone-address-and-email-on-blue-3d-picture-id1312566254?b=1&k=20&m=1312566254&s=170667a&w=0&h=6a3bBX8L-53D30tKFVAQlA6_3lclcsWThP1ZVTDwcGE=");
+  width: 100vw;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 3px 9px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 2rem;
+  flex-direction: column;
+}
+.top-contact > h1 {
+  font-size: 3rem;
+}
+.top-contact > h3 {
+  font-size: 1.2rem;
+  width: 80%;
+  text-align: center;
+}
+.bottom-contact {
+  min-height: calc(100vh - 582px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.card-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  box-shadow: 2px 3px 8px #000;
+  background-color: #fff;
+  min-height: 300px;
+  position: absolute;
+  top: -50px;
+  width: 500px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.card-contact p {
+  width: 60%;
+}
+.left {
+  left: 2rem;
+}
+.right {
+  right: 2rem;
+}
+.card-contact i {
+  font-size: 2rem;
+}
+.card-contact a {
+  text-decoration: none;
+  color: rgb(21, 187, 228);
+}
+#btn {
+  padding: 1rem 2rem;
+  background-color: rgb(242, 132, 30);
+  color: #fff;
+  transition: all 0.25s linear;
+}
+#btn:hover {
+  transform: translateY(-4px);
+  background-color: rgb(214, 109, 12);
+}
+#btn:active {
+  background-color: rgb(163, 85, 13);
+}
+/* Contact section ends */
+
+/* Media queries */
+@media screen and (max-width: 1080px) {
+  .card-contact {
+    position: static;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .bottom-contact {
+    padding-bottom: 1rem;
+  }
+  .card-container {
+    gap: 2rem;
+  }
+  .home-section > .bottom > p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .home-section > h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
