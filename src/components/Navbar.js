@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import playAudio from "../utils/playmp3";
 
 function Navbar() {
   return (
@@ -11,13 +12,19 @@ function Navbar() {
       />
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={playAudio}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={playAudio}>
+            About
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={playAudio}>
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>
